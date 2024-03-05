@@ -22,6 +22,6 @@ export const patchTodo = (id, newDone) =>
   });
 
 export const deleteTodo = (id) =>
-  fetch(`h${BACKEND_URL}/todos/${id}`, {
+  fetch(`${BACKEND_URL}/todos/${id}`, {
     method: "DELETE",
   });

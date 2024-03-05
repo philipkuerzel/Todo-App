@@ -7,8 +7,8 @@ const TodoItem = ({ title, done, id }) => {
     return (
         <div key={id} className="taskItem">
             <div className="task">
-                <label onClick={() => taskDone(id, !done)}>
-                    <input
+                <label >
+                    <input onChange={() => taskDone(id, !done)}
                         className="checkbox"
                         type="checkbox"
                         checked={done}
