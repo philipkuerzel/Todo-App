@@ -1,0 +1,116 @@
+* {
+  color: rgb(97, 96, 96);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+h1 {
+  font-size: 2rem;
+  color: black;
+  padding: 2rem 0 1rem 0;
+}
+
+.app-container {
+  background-color: rgb(244, 225, 191);
+  height: 50vh;
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  padding: 0 10px 0 5px;
+  border-bottom: 1px solid grey;
+}
+
+.form>* {
+  background: transparent;
+    border: none;
+    height: 35px;
+}
+
+label {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: rgba(41, 39, 38, 0.086);
+  border-radius: 3px;
+}
+
+input[type=text] {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #6C717B;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+#addBtn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: grey;
+}
+
+.counter {
+  font-size: 1.5rem;
+  margin: 1rem 0 2rem 0;
+}
+
+.output {
+  margin-left: 0;
+    padding: 0;
+    list-style: none;
+    height: 220px;
+    overflow: auto;
+    width: 70%;
+}
+
+.taskItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+span {
+font-size: 1.25rem;
+cursor: pointer;
+}
+
+.delBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.checkbox {
+  cursor: pointer;
+  color: #6C717B;
+  margin-right: 10px;
+}
+
+
