@@ -1,10 +1,10 @@
-const FRONTEND_URL = import.meta.env.VITE_FRONTEND_URL;
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 export const getTodos = () =>
-  fetch(`${FRONTEND_URL}/todos`).then((response) => response.json());
+  fetch(`${BACKEND_URL}/todos`).then((response) => response.json());
 
 export const postTodo = (title) =>
-  fetch(`${FRONTEND_URL}/todos`, {
+  fetch(`${BACKEND_URL}/todos`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,7 +13,7 @@ export const postTodo = (title) =>
   }).then((response) => response.json());
 
 export const patchTodo = (id, newDone) =>
-  fetch(`${FRONTEND_URL}/todos/${id}`, {
+  fetch(`${BACKEND_URL}/todos/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
@@ -22,6 +22,6 @@ export const patchTodo = (id, newDone) =>
   });
 
 export const deleteTodo = (id) =>
-  fetch(`h${FRONTEND_URL}/todos/${id}`, {
+  fetch(`h${BACKEND_URL}/todos/${id}`, {
     method: "DELETE",
   });
