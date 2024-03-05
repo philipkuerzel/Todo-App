@@ -2,13 +2,14 @@ import express from "express";
 import fs from "fs/promises";
 import cors from "cors";
 import { v4 as uuid } from "uuid";
+import "dotenv/config";
 
 const app = express();
 const PORT = 3000;
 const dbFilePath = "./todos.json";
 
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_URL,
     optionsSuccessStatus: 200,
 };
 
@@ -87,5 +88,5 @@ app.delete("/todos/:id", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`listening on ${process.env.BACKEND_URL}`);
 });
